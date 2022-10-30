@@ -1,3 +1,0 @@
-Pasta destinada para PHP em geral, atividades Projetos e Provas.
-se tiver um projeto próprio que na qual queira armazenar ou fazer upload para caso alguém veja e resolva seu problema, basta fazer upload dentro de uma pasta na pasta 'Projetos'.
-OBS: por favor deixa cada arquivo em sua devida pasta.
