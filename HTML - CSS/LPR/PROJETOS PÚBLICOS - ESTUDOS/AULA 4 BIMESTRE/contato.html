@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <!--Topo da Página-->
+    <header id="header">
+        <div id="pesquisar">
+            <h1 id="logo">ETE - Ministro Fernando Lyra</h1>
+
+            <form action="">
+                <input type="search" name="pesquisar" placeholder="       O que você está procurando?">
+                <input type="submit" value="pesquisar" id="input-submit-pesquisar">
+            </form>
+
+        </div>
+    </header>
+    <nav>
+        <div id="menu">
+            <a href="home.html"><span>HOME</span></a>
+            <a href="contato.html"><span>CONTATO</span></a>
+            <a href="https://createwebmobile.com.br/" target="blank"><span>SOBRE</span></a>
+            <a href="tabelas.html" target="blank"><span>TABELAS</span></a>
+        </div>
+    </nav>
+
+    <!--Corpo Principal-->
+    <main>
+        <!--Seção do formulário-->
+        <section>
+            <div id="formulario">
+                <div id="titulo-formulario">
+                    <h1 id="botao">Formulário</h1>
+                </div>
+
+                <!--Formulário-->
+                <form>
+
+                    <!--Nome-->
+                    <label for="nome">Nome:</label>
+                    <br>
+                    <input type="text" name="nome" id="nome" class="input" placeholder="Digite seu nome" maxlength="10"
+                        required minlength="3">
+                    <br>
+
+                    <!--Campo disabled não envia os dados-->
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" name="email" id="nome" class="input" placeholder="Digite seu E-mail" disabled>
+                    <br>
+
+                    <!--Campo tel com regex para validação-->
+                    <label for="tel">Telefone Celular:</label><br>
+                    <input type="tel" name="tel" id="tel" class="input" placeholder="81-9999-9999"
+                        pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required>
+
+                    <!--Campo tel com regex para validação-->
+                    <div>
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <br>
+                        <input type="datetime-local" name="data-nascimento" id="data-nascimento" class="input"
+                            placeholder="Digite seu data-nascimento">
+                    </div>
+
+
+                    <!--Campo disabled não envia os dados-->
+                    <label for="campo-somente-leitura">Campo Somente de Leitura:</label>
+                    <br>
+                    <input type="text" name="campo-leitura" id="campo-leitura" class="input"
+                        placeholder="Este é um campo apenas de leitura" readonly>
+
+                    <label for="estado">Estado:</label>
+                    <br>
+
+                    <!--Select Optgroup-->
+
+                    <select name="estados-brasil">
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                        </optgroup>
+                        <optgroup label="Nordeste">
+
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="RN">Rio Grande do Norte</option>
+
+                        </optgroup>
+                        <optgroup label="Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+
+                        </optgroup>
+                        <optgroup label="Sudeste">
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                    </select>
+
+                    <!--Campa oculto-->
+                    <input type="hidden" name="token" value="2022">
+
+                    <div id="footer-form">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                        <button type="button" onClick="alterar_back_titulo();" style="background-color:black" id="btn-alterar-cor">Alterar Cor</button>
+                        <button type="button" onClick="padrão_back_titulo();">Cor Padrão</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <footer>
+            <!--Código do símbolo do Copyright = 00169-->
+            <h4>Copyright © - Desenvlvedor: Luciano Silva</h4>
+        </footer>
+
+    </main>
+    
+    <script src="scripts.js"></script>
+
+    <!--
+    <script>         
+
+        function alterar_back_titulo(){
+            let back_titulo = document.getElementById('botao');
+            back_titulo.style.backgroundColor = '#000';
+        }
+
+        function padrão_back_titulo(){
+            let back_titulo = document.getElementById('botao');
+            back_titulo.style.backgroundColor = '#9125f0';
+        }
+
+    </script>
+-->
+
+</body>
+
+</html>

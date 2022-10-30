@@ -1,0 +1,36 @@
+/*Desadio 1*/
+
+use sakila;
+
+select * from actor;
+
+select * from film;
+
+select*from film_actor;
+
+select (select `first_name` from actor where actor_id='88')as Nome,
+(select `last_name` from actor where actor_id="88") as UltimoNome,
+title as Titulo, release_year as Ano_Lançamento from film
+where film_id in (select film_id from film_actor where actor_id="88");
+
+/*Desafio 2*/
+
+select * from customer
+where customer_id='4';
+
+select * from address
+where address_id=8;
+
+select * from city;
+
+select * from country
+where country_id = 64;
+
+select * from category;
+
+select `first_name`, `last_name`, (select `address` from address where address_id=8)as Endereço,
+(select `district` from address where district like 'Mandalay') as Distrito,
+(select `city` from city where city_id = 349) as Cidade,
+(select `country` from country where country_id = 64) as País
+from customer
+where customer_id=4;

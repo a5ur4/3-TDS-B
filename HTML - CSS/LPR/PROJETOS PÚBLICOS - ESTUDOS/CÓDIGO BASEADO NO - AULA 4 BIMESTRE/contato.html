@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETE-MFL</title>
+    <link rel="icon" type="image/png" href="/imgs/amongus.png">
+    <style>
+        body {
+            padding: 0;
+            padding: 0;
+            margin: 0;
+            background-color: lightgray;
+            flex: auto;
+        }
+
+        header{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        #botoes a{
+            background-color: black;
+            margin-left: 30px;
+            margin-top: 10px;
+            box-shadow: none;
+            font-weight: 200;
+            font-size: medium;
+            color: white;
+            text-decoration: none;
+            padding: 0 12px;
+            line-height: 40px; 
+            transition: 0.5s;    
+        }
+
+        #botoes a:hover{
+            color: blueviolet;
+            margin-left: 70px;
+            margin-right: 70px;
+            font-size: large;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            height: 40px;
+        }
+
+        #search{
+            border-radius: 15px;
+            height: 45px;
+            width: 500px;
+            margin-top: 10px;
+            border: none;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: blueviolet;
+            text-align: center;
+            background-color: #fff;
+            height: 45px;
+            width: 100px;
+            border-radius: 15px;
+            width: 80px;
+            margin-top: 10px;
+            border: none;
+            margin-left: -410px;
+            margin-right: 25px;
+        }
+
+        a:hover {
+            color: white;
+            background-color: purple;
+            transition: 0.5s;
+        }
+
+        form{
+            margin: 0 auto;
+            border:  none;
+            background-color: white;
+            height: 370px;
+            width: 790px;
+        }
+
+        #botao{
+            background-color: blueviolet;
+            text-align: center;
+            color: white;
+        }
+
+        #text_box{
+            padding-left: 20px;
+        }
+
+        input{
+            height: 30px;
+            width: 750px;
+            border-radius: 3px;
+            border-width: 1px;
+        }
+
+        p{
+            height: 30px;
+            width: 750px;
+            border: rgb(46, 46, 46) solid;
+            border-width: 1px;
+            color: gray;
+            border-width: 1px;
+        }
+
+        select{
+            height: 30px;
+            width: 755px;
+            border-radius: 3px;
+            border-width: 1px;
+        }
+
+        #bottons{
+            margin-top: 25px;
+            margin-left: 475px;
+        }
+
+        button{
+            height: 30px;
+            width: 70px;
+            background-color: blueviolet;
+            border: none;
+            color: #fff;
+            box-shadow: 8px 8px 11px -1px rgba(0,0,0,0.75);
+            font-size: x-small;
+            font-weight: 400;
+            display: inline;
+            justify-content: start;
+        }
+
+        button:hover{
+            background-color: rgb(160, 89, 226);
+            transition: 0.5s;
+        }
+
+        #btn_alt_cor{
+            height: 30px;
+            width: 70px;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 8px 8px 11px -1px rgba(0,0,0,0.75);
+            border: none;
+            border-radius: 0px;
+            color: white;
+            font-size: x-small;
+        }
+
+        #btn_alt_cor:hover{
+            background-color: rgb(58, 58, 58);
+            transition: 0.5s;
+        }
+
+        #btn_alt_cor_2{
+            height: 30px;
+            width: 70px;
+            background-color: blueviolet;
+            box-shadow: 8px 8px 11px -1px rgba(0,0,0,0.75);
+            border: none;
+            border-radius: 0px;
+            color: white;
+            font-size: x-small;
+        }
+
+        #btn_alt_cor_2:hover{
+            background-color: purple;
+            transition: 0.5s;
+        }
+
+
+        footer{
+            width: 100%;
+            height: 50px;
+            background-color:blueviolet;
+            margin-top: 60px;
+            bottom: 0;
+            position: fixed;
+        }
+
+        footer h3{
+            text-align: center;
+            color: white;
+            font-weight: 100;
+        }
+            </style>
+</head>
+<body>
+    <header>
+        <h2 style="margin-left: 10px;">ETE - Ministro Fernando Lyra </h2>
+        <input type="search" placeholder="      O que você está procurando?" id="search">
+        <a href="/imgs/y2meta.com-Monkey Flip Meme (MONKI FLIP)-(240p).mp4" autoplay><br>Pesquisar</a>
+    </header>
+        <nav>
+            <div id="botoes">
+                <a href="tabelas.html">HOME</a>
+                <a href="contato.html">CONTATO</a>
+                <a href="sobre.html">SOBRE</a>
+                <a href="/HTML - CSS/AULA/21_10.html">TABELAS</a>
+            </div>
+        </nav>
+        <br>
+    <main>
+        <form>
+            <h2 id="botao">Formulário</h2>
+            <div id="text_box">
+                <label for="text">Nome:</label>
+                <br>
+                <input type="text" name="name" id="name" id="name" placeholder="Digite seu nome">
+                <br>
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+                <br>
+                <label for="tel">Telefone Celular:</label>
+                <br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="(81) 9999-9999">
+                <br>
+                <label for="datetime-local">Data de Nascimento:</label>
+                <br>
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="" min="" max="">
+                <br>
+                <label for="text">Campo Somente de Leitura:</label>
+                <br>
+                <input type="text" name="text" id="text" placeholder="Este é um campo apenas de leitura" readonly>
+                <br>
+                <label for="select">Estado:</label>
+                <br>
+                <select name="Estado">
+                    <optgroup label="Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">Espirito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+                <div id="bottons">
+                    <div class="bottons_2">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                        <input type="button" value="Alterar Cor" onclick="alterar_back_titulo();" id="btn_alt_cor">
+                        <input type="button" value="Cor Padrão" onclick="padrão_back_titulo();" id="btn_alt_cor_2">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <br>
+    <footer>
+        <h3>Copyright © - Desenvolvedor: _a5ur4</h3>
+    </footer>
+    <script>
+        function alterar_back_titulo() {
+            let back_titulo = document.getElementById("botao");
+            back_titulo.style.backgroundColor = "#000";
+        }  
+        function padrão_back_titulo() {
+            let back_titulo = document.getElementById("botao");
+            back_titulo.style.backgroundColor = "#9125f0";
+        }
+    </script>
+</body>
+
+</html>

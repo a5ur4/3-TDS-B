@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At 3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #692190;
+        }
+
+        header h1{
+            font-style: italic;
+            color: white;
+            font-size: xx-large;
+            margin-left: 20px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        header button{
+            margin-right: 20px;
+            background-color: white;
+            color: #2d1739;
+            height: 37px;
+            width: 90px;
+            border: none;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        header button:hover{
+            background-color: #9f3c9a;
+            color: white;
+            transition: 0.5s;
+        }
+
+        #menu{
+            background-color: black;
+            text-align: center;
+            height: 43px;
+        }
+
+        #menu a{
+            margin-top: 10px;
+            font-weight: 200;
+            font-size: 23px;
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            line-height: 40px; 
+        }
+
+        #menu a:hover{
+            color: blueviolet;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 27px;
+            transition: 0.5s;
+        }
+
+        main{
+            margin: 0 auto;
+            text-align: center;
+            width: 600px;
+        }
+
+        main h1{
+            color: rgb(103, 103, 103);
+            font-weight: bold;
+            font-size: x-large;
+        }
+
+        main section table{
+            border: none;
+            border-color: rgb(200, 198, 198);
+        }
+
+        #central{
+            margin: 0 auto;
+            text-align: center;
+            font-size: medium;
+            font-weight: 200;
+        }
+
+        table{
+            margin: 0 auto;
+            text-align: center;
+            width: 900px;
+            background-color: white;
+            border: none;
+            margin-left: -150px;
+        }
+
+        th{
+            height: 30px;
+            padding: 10px;
+            font-size: large;
+        }
+
+        td{
+            text-align: center;
+            padding: 10px;
+            font-size: large;
+        }
+
+        td a img{
+            width: 25px;
+        }
+
+        footer{
+            width: 100%;
+            height: 105px;
+            background-color: #1f082c;
+            margin-top: 60px;
+            bottom: 0;
+            position: fixed;
+            font-weight: small;
+        }
+
+        #left{
+            text-align: left;
+            color: white;
+            font-weight: small;
+            margin-left: 90px;
+            line-height: 0%;
+        }
+
+        #midle{
+            margin-top: -69px;
+            text-align: center;
+            color: white;
+            margin-left: 20px;
+            line-height: 0%;
+        }
+
+        #linha_horizontal{
+            margin-left: -15px;
+            width: 325px;
+            border: 1px solid white;
+            margin: 0 auto;
+            line-height: 0%;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        #right{
+            text-align: right;
+            margin-top: -80px;
+            text-align: left;
+            color: white;
+            margin-left: 1120px;
+            line-height: 0%;
+        }
+
+        #right a{
+            text-decoration: none;
+            color: white;
+            font-weight: medium;
+            line-height: 0%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desenvolvimento de sistemas</h1>
+        <button type="submit">Entrar</button>
+    </header>
+    <div id="menu">
+        <a href="https://youtu.be/-G-AuLXhTN4">Home</a>
+        <a href="https://youtu.be/-G-AuLXhTN4">Sobre</a>
+        <a href="https://youtu.be/-G-AuLXhTN4">Equipe</a>
+    </div>
+    <main>
+        <br>
+        <br>
+        <br>
+        <section id="central">
+            <h1>Tabela com acoes tipo links, botoes e imagens</h1>
+            <table border="1" widht="100%" bordercolor="black" id="tabela">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Senha</th>
+                        <th>Telefone</th>
+                        <th colspan="2">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: lightgray;">
+                        <td>1</td>
+                        <td>Fernando Lyra</td>
+                        <td>Fernando Lyra_dialog @yahoo. com.br</td>
+                        <td>123456</td>
+                        <td>(81)9 9999-9999</td>
+                        <td><a href="https://youtu.be/-G-AuLXhTN4">Excluir</a></td>
+                        <td><a href="https://youtu.be/-G-AuLXhTN4">Alterar</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fernando Lyra</td>
+                        <td>Fernando Lyra_dialog @yahoo. com.br</td>
+                        <td>123456</td>
+                        <td>(81)9 9999-9999</td>
+                        <td><button>Excluir</button></td>
+                        <td><button>Alterar</button></td>
+                    </tr>
+                    <tr style="background-color: lightgray;">
+                        <td>3</td>
+                        <td>Fernando Lyra</td>
+                        <td>Fernando Lyra_dialog @yaffooteom.br</td>
+                        <td>123456</td>
+                        <td>(81)9 9999-9999</td>
+                        <td><a href="https://youtu.be/-G-AuLXhTN4"><img src="https://cdn-icons-png.flaticon.com/512/2891/2891491.png"></a></td>
+                        <td><a href="https://youtu.be/-G-AuLXhTN4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Edit_icon_%28the_Noun_Project_30184%29.svg/1024px-Edit_icon_%28the_Noun_Project_30184%29.svg.png" alt=""></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </sectionv>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <br>
+        <div id="left">
+            <h4>ETE - Escola Técnica Estadual</h4>
+            <h4>Ministro Fernando Lyra</h4>
+            <h4>Curso Técnico - TDS e Marketing</h4>
+        </div>
+        <div id="midle">
+            <h4>Contatos</h4>
+            <nav id="linha_horizontal"></nav>
+            <h4 style="margin-left:-170px ;">Celular: (81) 9999-9999</h4>
+            <h4 style="margin-left: -15px;">E-mail: ete_ministrofernandolyra@gmail.com</h4>
+        </div>
+        <div id="right">
+            <a href="https://goo.gl/maps/58H8hbk7k2XFu8517" target="_blank">ETE - Localização  <img src="https://png.monster/wp-content/uploads/2021/06/png.monster-10-252x370.png" style="width: 15px;"></a>
+            <h4>R. Ver. João Avelino Sobrinho - Cidade Alta.</h4>
+            <h4>Caruaru - PE</h4>
+        </div>
+    </footer>
+</body>
+</html>

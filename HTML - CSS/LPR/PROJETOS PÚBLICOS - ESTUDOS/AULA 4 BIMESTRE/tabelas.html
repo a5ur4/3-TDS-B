@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    <title>Document</title>
+
+    <style>
+
+/*
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+*/
+
+.tb td, .tb th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/*
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+*/
+
+.tr tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.th th{
+    text-align: center;
+}
+
+
+
+.rowspan{
+    border: 2px solid red;
+}
+
+.colspan{
+    border: 2px solid red;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabela 1 - Sem bordas</h1>
+    <!--Tabela 1-->
+    <table>
+        <!--tr representam umas linhas da tabelas-->
+        <tr>
+            <!--th ou thead são as tag de cabeçalhos de tabelas-->
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Fulano da Silva</td>
+            <td>fulano_dialog@yahoo.com.br</td>
+            <td>123456</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Cicrano Lyra</td>
+            <td>beltrano_dialog@yahoo.com.br</td>
+            <td>123456</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Beltrano Melo</td>
+            <td>cicrano_dialog@yahoo.com.br</td>
+            <td>123456</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <br>
+    <br>
+
+    <h1>Tabela 2 - Com atributos(obsoletos)</h1>
+
+    <!--Tabela 2 com atributos-->
+    <table border="1" width="100%" bordercolor="blue">
+
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th colspan="2" class="colspan">Telefones</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td>(81)9 9999-9999</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td>(81)9 9999-9999</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td>(81)9 9999-9999</td>
+        </tr>
+
+    </table>
+    <br>
+<hr>
+    <br>
+    <br>
+
+    <h1>Tabela 3 com atributos colspan e rowspan</h1>
+
+    <!--Tabela 3 com atributos colspan e rowspan-->
+    <table border="1">
+
+        <tr>
+
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Telefones</th>
+            <th>Disciplinas</th>
+
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td rowspan="2" class="rowspan">Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>            
+            <td>LPR</td>
+
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyradialoguw@gmail.com</td>
+            <td>987654</td>
+            <td>(81)9 9999-9999</td>            
+            <td>TDS</td>
+        </tr>
+
+       
+    </table>
+
+    <br>
+    <br>
+
+    <h1>Tabela 4 - Com atributos(obsoletos)</h1>
+    
+    <!--Tabela 4 formatada com css-->
+    <table class="tb tr">
+    
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Telefones</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+           
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+           
+        </tr>
+    
+    </table>
+    <br>
+
+    <h1>Tabela 5 - Como imagens e botões</h1>
+    
+    <!--Tabela 5 formatada com css-->
+    <table class="tb tr th">
+    
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Telefones</th>
+            <th colspan="2">Ações</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td><a href="">Excluir</a></td>
+            <td><a href="">Alterar</a></td>
+    
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td><a href="">Excluir</a></td>
+            <td><a href="">Alterar</a></td>
+    
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>           
+            <td><a href="">Excluir</a></td>
+            <td><a href="">Alterar</a></td>
+    
+        </tr>
+    
+    </table>
+    <br>
+    
+    <hr>
+    <br>
+    <br>
+    <!--Tabela 5 com ações tipo links, buttons e imagens-->
+    <h1>Tabela 5 com ações tipo links, buttons e imagens</h1>
+    <table class="tb tr th">
+    
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Telefones</th>
+            <th colspan="2">Ações</th>
+        </tr>
+    
+        <tr>
+            <td>1</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td><a href="">Excluir</a></td>
+            <td><a href="">Alterar</a></td>
+    
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td><button>Excluir</button></td>
+            <td><button>alterar</button></td>
+    
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>Fernando Lyra</td>
+            <td>Fernando Lyra_dialog@yahoo.com.br</td>
+            <td>123456</td>
+            <td>(81)9 9999-9999</td>
+            <td><a href=""><img src="excluir.png" width="20px"></a></td>
+            <td><a href=""><img src="editar.png" width="20px"></a></td>
+    
+        </tr>
+    
+    </table>
+    <br>
+
+
+
+</body>
+
+</html>

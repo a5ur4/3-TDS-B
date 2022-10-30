@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AT Luciano</title>
+        <style>
+            body {
+                color: rgb(99, 99, 99);
+                background-color: rgb(246, 225, 255);
+                padding-bottom: 10%;
+            }
+
+            main {
+                text-align: left;
+                background-color: white;
+                margin: 0 auto;
+                width: 100vh;
+                box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.452);
+                border-radius: 5px;
+
+                padding-top: 3%;
+                padding-bottom: 3%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            header {
+                text-align: center;
+                background-color: white;
+                margin: 0 auto;
+                margin-top: 5%;
+                width: 100vh;
+                box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.452);
+                border-radius: 5px;
+                border-top: 20px solid purple;
+            }
+            input[type="text"] {
+                padding: 10px;
+                width: 95%;
+                margin: 0 0 0 0;
+            }
+            .botao {
+                width: 100vh;
+                margin: 0 auto;
+            }
+            button[type="submit"] {
+                background-color: blueviolet;
+                color: white;
+                border: none;
+                padding: 10px;
+                width: 10%;
+                float: right;
+                border-radius: 5px;
+            }
+            fieldset {
+                width: 95%;
+                display: flex;
+                justify-content: center;
+            }
+            legend {
+                font-weight: bold;
+            }
+            select {
+                padding: 10px;
+                width: 98.5%;
+            }
+            h1 {
+                text-align: center;
+            }
+            .text {
+                width: 100vh;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="box_2">
+            <h1>Prova 2 TDSA - LPR</h1>
+            <h2>Formulários</h2>
+        </header>
+        <br>
+        <main id="box">
+            <form class="aling">
+                <label>Nome Completo:</label>
+                <br/>
+                <input type="text" name="username" placeholder="Digite seu nome">
+                <br>
+                <br>
+                <label>Selecione uma Linguagem</label>
+                <br>
+                <select name="Linguagem" class="ling-select" placeholder="Escolha uma linguagem">
+                    <option value="Escol">Escolha uma linguagem</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Java">JavaScript</option>
+                    <option value="C++">C++</option>
+                    <option value="PY">Python</option>
+                </select>
+                <br>
+                <div>
+                    <h3>Responda:</h3>
+                    <p>
+                        Qual atributo deve ser usado para que uma opção seja exibida como padrão na caixa de seleção acima?
+                        <br>
+                        Faça com que a resposta correta venha como padrão no radio correspondente abaixo
+                    </p>
+                </div>
+                <div>
+                    <input type="radio" name="cheked" id="pergunta" value="cheked">
+                    <label for="pergunta">cheked</label>
+                    <input type="radio" name="selected" id="pergunta" value="selected">
+                    <label for="pergunta">selected</label>
+                    <input type="radio" name="select" id="pergunta" value="select">
+                    <label for="pergunta">select</label>
+                </div>
+                <br>
+                <fieldset>
+                    <legend>Deixe sua opinião aqui</legend>
+                    <br>
+                    <textarea id="op" name="op" rows="10" cols="85"></textarea>
+                </fieldset>
+            </form>
+            <br>
+        </main>
+        <div class="botao">
+            <button type="submit">Enviar</button>
+        </div>
+        <div class="text">
+            <h1>Template baseado no Google Forms</h1>
+        </div>
+    </body>
+</html>
+<!--
+Alunos:
+    Pedro Bastos;
+    Davi Lopes;
+    Gabriel Heitor;
+-->

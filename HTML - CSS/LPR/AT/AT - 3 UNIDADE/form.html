@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Cadastro</title>
+
+    <style>
+        body {
+            background-color: rgb(231, 227, 227);
+
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .card-login {
+            width: 400px;
+            height: 1100px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgb(189, 187, 187);
+            display: flex;
+            justify-content: center;
+        }
+
+        #login {
+            margin-top: 40px;
+        }
+
+        .input {
+            width: 300px;
+            height: 20px;
+            margin-bottom: 8px;
+            border: 2px solid rgb(170, 168, 168);
+            border-radius: 4px;
+            outline-color: rgb(198, 247, 142);
+        }
+
+        select {
+            width: 308px;
+            height: 27px;
+            margin-bottom: 8px;
+            border: 2px solid rgb(170, 168, 168);
+            outline-color: rgb(198, 247, 142);
+            border-radius: 4px;
+        }
+
+        #submit {
+            background-color: rgb(124, 183, 238);
+            outline: gray;
+            height: 32px;
+            width: 310px;
+            border-radius: 8px;
+            color: white;
+            border: 2px solid rgb(170, 168, 168);
+        }
+
+        #submit:hover {
+            background-color: rgb(90, 170, 245);
+        }
+
+        #titulo {
+            text-align: center;
+            margin-top: -10px;
+        }       
+
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <section class="card-login">
+            <div id="login">
+                <h1 id="titulo">Tela de Cadastro</h1>
+                <form action="recebe_dados_cadastro.php" method="GET">
+
+                    <label for="nome">Nome:</label>
+                    <br>
+                   
+                    <input type="text" class="input" name="nome" id="nome" required>                   
+                    
+                     <br>
+
+                    <label for="endereco">Endereço:</label>
+                    <br>
+                    <input type="text" class="input" name="endereco" id="endereco" required>
+                    <br>
+                    <label for="numero">Número:</label>
+                    <br>
+                    <input type="number" class="input" name="numero" id="numero" min="0" required>
+
+                    <br>
+
+                    <fieldset style="align-items: center; text-align: center;">
+                        <legend>
+                            Dados de acesso
+                        </legend>
+                        <label for="usuario" style="margin-right: 115px;">Usuário:</label>
+                        <br>
+                        <input type="text" name="usuario" id="usuario">
+                        <br>
+                        <label for="senha" style="margin-right: 130px;">Senha:</label>
+                        <br>
+                        <input type="password" name="senha" id="senha">
+                        <br>
+                        <label for="confirmarsenha" style="margin-right: 40px;">Confirma sua Senha:</label>
+                        <br>
+                        <input type="password" name="confirmarsenha" id="confirmarsenha">
+                    </fieldset>
+
+                    <label for="bairro">Bairro:</label>
+                    <br>
+                    <input type="text" class="input" name="bairro" id="bairro" required>
+
+                    <br>
+
+                    <label for="cep">Cep:</label>
+                    <br>
+                    <input type="text" class="input" name="cep" id="cep" required>
+
+                    <br>
+
+                    <label for="estado">Estado:</label>
+                    <br>
+                    <select name="estado">
+                        <option value="PE">Pernambuco</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PB">Paraíba</option>
+                    </select>
+
+                    <br>
+
+                    <label for="cidade">Cidade:</label>
+                    <br>
+                    <select name="cidade">
+                        <option value="caruaru">Caruaru</option>
+                        <option value="são luís">São Luís</option>
+                        <option value="natal">Natal</option>
+                        <option value="campina grande">Campina Grande</option>
+                    </select>
+
+                    <br>
+
+                    <label for="habilidades">Habilidades:</label>
+                    <br>
+                    <select style="height: 70px;" name="habilidades[]" multiple>
+                        <option value="liderança">Liderança</option>
+                        <option value="proatividade">Proatividade</option>
+                        <option value="criatividade">Criatividade</option>
+                        <option value="comunicação">Comunicação</option>
+                    </select>
+
+                    <br>
+
+
+                    <label for="genero">Gênero:</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="genero" value="masculino" checked id="masculino">
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" name="genero" value="feminino" id="feminino">
+                    <label for="feminino">Feminino</label>
+
+                    <input type="radio" name="genero" value="outro" id="outros">
+                    <label for="outros">Outros</label>
+
+                    <br>
+                    <br>
+
+                    <label>Linguagens de Programação:</label>
+                    <br>
+                    <br>
+
+                    <input type="checkbox" name="lang[]" value="HTML" checked id="html">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" name="lang[]" value="python" id="python">
+                    <label for="python">Python</label>
+
+                    <input type="checkbox" name="lang[]" value="php" id="php">
+                    <label for="php">PHP</label>
+
+                    <br>
+                    <br>
+
+                    <label for="arquivo">Selecione um Arquivo:</label>
+                    <br>
+                    <br>
+                    <input type="file" id="arquivo" name="arquivo">
+
+                    <br>
+                    <br>
+
+                    <label for="cor">Cor:</label>
+                    <input type="color" name="cor" id="cor">
+
+                    <br>
+                    <br>
+
+                    <label for="cor">Observação:</label>
+                    <br>
+
+                    <textarea id="obs" name="obs" rows="3" cols="37">
+
+                    </textarea>
+
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Enviar" id="submit">
+
+
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

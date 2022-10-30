@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #botoes a{
+            background-color: black;
+            margin-left: 30px;
+            margin-top: 10px;
+            box-shadow: none;
+            font-weight: 200;
+            font-size: medium;
+            color: white;
+            text-decoration: none;
+            padding: 0 12px;
+            line-height: 40px; 
+            transition: 0.5s;    
+        }
+
+        #botoes a:hover{
+            color: blueviolet;
+            margin-left: 70px;
+            margin-right: 70px;
+            font-size: large;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            height: 40px;
+        }
+
+        #search{
+            border-radius: 15px;
+            height: 45px;
+            width: 500px;
+            margin-top: 10px;
+            border: none;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: blueviolet;
+            text-align: center;
+            background-color: #fff;
+            height: 45px;
+            width: 100px;
+            border-radius: 15px;
+            width: 80px;
+            margin-top: 10px;
+            border: none;
+            margin-left: -410px;
+            margin-right: 25px;
+        }
+
+        a:hover {
+            color: white;
+            background-color: purple;
+            transition: 0.5s;
+        }
+
+        a img:hover{
+            transition: 0.5s;
+            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(3);
+            border-radius: 20px;
+            box-shadow: 1px -1px 58px 12px blueviolet;
+        }
+
+        button{
+            display: block;
+            margin: 0 auto;
+            height: 40px;
+            width: 200px;
+            background-color: blueviolet;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 8px 8px 22px 1px rgba(0,0,0,0.75);
+        }
+
+        button:hover{
+            background-color: purple;
+            width: 230px;
+            border-radius: 6px;
+            transition: 0.5s;
+        }
+
+        table{
+            margin: 0 auto;
+            text-align: center;
+            width: 900px;
+            background-color: white;
+            border: none;
+        }
+
+        th{
+            background: blueviolet;
+            color: white;
+            height: 30px;
+            border: none;
+        }
+
+        td{
+            text-align: left;
+            padding: 10px;
+        }
+
+        footer{
+            width: 100%;
+            height: 50px;
+            background-color:blueviolet;
+            margin-top: 60px;
+            bottom: 0;
+            position: fixed;
+        }
+
+        footer h3{
+            text-align: center;
+            color: white;
+            font-weight: 100;
+        }
+
+        .icons a{
+            margin-left: 2px;
+            margin-right: -1px;
+            padding: -10px;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        a img{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="margin-left: 10px; color: white">ETE - Ministro Fernando Lyra </h2>
+        <input type="search" placeholder="      O que você está procurando?" id="search">
+        <a href="/imgs/y2meta.com-Monkey Flip Meme (MONKI FLIP)-(240p).mp4"><br>Pesquisar</a>
+    </header>
+        <nav>
+            <div id="botoes">
+                <a href="tabelas.html">HOME</a>
+                <a href="contato.html">CONTATO</a>
+                <a href="sobre.html">SOBRE</a>
+                <a href="">TABELAS</a>
+            </div>
+        </nav>
+    <br>
+    <main>
+        <button type="button" id="botao_func" onclick="show_hidden('mostrar_esconder')">Esconder Tabela</button>
+        <br>
+        <section id="mostrar_esconder">
+            <table border="1" widht="100%" bordercolor="black" class="icons">
+            <div class="head_th">
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Foto</th>
+                </tr>
+            </div>
+            <div>
+                <tr border="1" widht="100%" bordercolor="black" >
+                    <td>1</td>
+                    <td>TÊNIS SUPERSTAR</td>
+                    <td>Criado originalmente para as quadras de basquete nos anos 70. Celebrado pelas lendas do hip hop da década de 80. O tênis adidas Superstar é um ícone do estilo de vida urbano. A mundialmente famosa biqueira de concha foi mantida como marca de originalidade e garantia de proteção. 
+                        Assim como era nas quadras de basquete no passado.Agora você pode andar tranquilamente pelas ruas ou calçá-lo para ir a um festival de música sem se preocupar com os pisões. O detalhe com as Três Listras serrilhadas e a caixa com o logo adidas Superstar garantem a autenticidade do seu look.</td>
+                    <td>R$499,99</td>
+                    <td><a href="https://www.adidas.com.br/tenis-superstar/EG4958.html" target="_blank"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7ed0855435194229a525aad6009a0497_9366/Tenis_Superstar_Branco_EG4958_01_standard.jpg" width="100px"></a></td>        
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black" >
+                    <td>2</td>
+                    <td>Tênis Jordan 1 Mid Masculino</td>
+                    <td>O tênis Air Jordan 1 Mid é inspirado no primeiro AJ1, oferecendo aos fãs OG uma visão da evolução da marca Jordan desde 1985.</td>
+                    <td>R$ 1199,99</td>
+                    <td><a href="https://www.nike.com.br/tenis-jordan-1-mid-masculino-016511.html?cor=IN#u_utm_source=Yahoopatrocinado&u_utm_medium=cpc&u_utm_campaign=DSA" target="_blank"><img src="https://imgnike-a.akamaihd.net/900x900/016511INA2.jpg" width="100px"></a></td>
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black" >
+                    <td>3</td>
+                    <td>Tênis Olympikus Veloz 2</td>
+                    <td>O Olympikus Veloz 2 é o tênis ideal para quem busca conforto e leveza para a sua corrida. O seu solado possui a tecnologia de amortecimento Evasense, que proporciona mais leveza, maciez e flexibilidade nas passadas.</td>
+                    <td>R$ 259,99</td>
+                    <td><a href="https://www.olympikus.com.br/tenis-olympikus-veloz-2-unissex-43419157-3-513/p" target="_blank"><img src="https://static.netshoes.com.br/produtos/tenis-olympikus-veloz-2/93/2I2-5808-793/2I2-5808-793_zoom1.jpg?ts=1662042889&ims=544x" width="100px"></a></td>
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black" >
+                    <td>4</td>
+                    <td>Chuck 70 Vintage Preto</td>
+                    <td>O Chuck 70 foi construído a partir do design original dos anos 1970, com materiais premium e habilidade extraordinária. Este design é feito em lona de algodão, complementando a entressola envernizada bege para uma execução cuidadosa.</td>
+                    <td>R$ 419,90</td>
+                    <td><a href="https://converse.com.br/chuck-70-vintage-alto-grande-ct09550004-preto" target="_blank"><img src="https://converse.com.br/media/catalog/product/1/6/162050c_a_107x1.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=897&width=960&canvas=960:897" width="100px"></a></td>
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black" >
+                    <td>5</td>
+                    <td>TÊNIS CARINA BOLD</td>
+                    <td>Inspirado na década de 80, porém, reinterpretado para promover o look descontraído das praias californianas, o tênis Carina Bold traz cabedal em material sintético, entressola e sola de borracha, palmilha SoftFoam+ para maior conforto, e faixa PUMA Formstrip na lateral como símbolo icônico do street style.</td>
+                    <td>R$379,90</td>
+                    <td><a href="https://br.puma.com/tenis-carina-bold-384476-51.html" target="_blank"><img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/384476/51/sv03/fnd/BRA/w/1000/h/1000/fmt/png" width="100px"></a></td>
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black">
+                    <td>6</td>
+                    <td>Tênis New Balance 574 Casual Masculino</td>
+                    <td>Viva o icônico 574! Um dos tênis mais clássicos na indústria mundial dos calçados, o 574 foi desenvolvido em 1988, como um tênis de corrida e inspirado em dois modelos diferentes da New Balance , o 576 e o 575. Dessa união, surgiu uma das silhuetas mais emblemáticas e teve muito destaque e sucesso pelo seu conforto e design.
+                        Atualmente é um dos calçados mais conhecidos e desejados no mercado sneaker, pela sua história, autenticidade e pela sua versatilidade no uso. Esse clássico, oferece uma entressola macia em EVA. Para maior suporte e proteção na área do calcanhar, a tecnologia ENCAP , que tornam cada passada muito mais segura e confortável para aguentar o dia a dia. Com inúmeras versões e materiais, esse modelo transcende através de inovação em materiais e versões, que o tornam uma referência de independência e um símbolo de engenhosidade e originalidade.</td>
+                    <td>R$ 449,99</td>
+                    <td><a href="https://www.newbalance.com.br/tenis-new-balance-574-casual-masculino-ml574lm2/p?skuId=391758" target="_blank"><img src="https://newbalance.vtexassets.com/arquivos/ids/233001-800-auto?v=637885851937170000&width=800&height=auto&aspect=true" width="100px"></a></td>
+                </tr>
+                <tr border="1" widht="100%" bordercolor="black">
+                    <td>7</td>
+                    <td>Chuteira Futsal Umbro Pro 5 Bump</td>
+                    <td>Seja o astro dos jogos com a Chuteira Futsal Umbro Pro 5 Bump: a Pro 5 que você já conhece, agora com tecnologia BUMP na palmilha interna para maior amortecimento e retorno de energia. 
+                        O cabedal (parte superior do calçado) é assimétrico, construído em couro natural com costura posicionada e biqueira de reforço em camurça na área frontal. Na parte medial e posterior possui combinado de mesh fusionado com laminado em aplique para reforçar e possibilitar maior respirabilidade do pé. 
+                        Solado de futsal com entressola BUMP de ponta-a-ponta e soleta em borracha, além de costura de reforço frontal.</td>
+                    <td>R$ 449,99</td>
+                    <td><a href="https://www.umbro.com.br/chuteira-futsal-umbro-pro-5-bump-1036468/p" target="_blank"><img src="https://umbro.vtexassets.com/arquivos/ids/446311-800-auto?v=637852991800100000&width=800&height=auto&aspect=true" width="100px"></a></td>
+                </tr>
+            </div>
+            </table>
+        </section>
+        <br>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <h3>Copyright © - Desenvolvedor: _a5ur4</h3>
+    </footer>
+    <script>
+        function show_hidden(el) {
+            var display = document.getElementById(el).style.display;
+            var botao = document.getElementById("botao_func");
+        
+            if(display == "none") {
+                document.getElementById(el).style.display = 'block';
+                botao.innerHTML = "Esconder Tabela";
+            }
+            else {
+                document.getElementById(el).style.display = 'none';
+                botao.innerHTML = "Mostrar Tabela";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Formulários</title>
+
+<style>
+    #div-tabela{
+       display: flex;
+       justify-content: center;
+       margin-top: 20px;
+       margin-bottom: 20px;
+    }
+    
+   #div-tabela button{
+     padding: 10px;
+     width:200px;
+    }
+
+    thead{
+        background-color:blueviolet;
+        color:white;
+    }
+
+    th{
+        padding:6px;
+         text-shadow: rgb(68, 68, 68) 0.1em 0.1em 0.2em;
+    }
+
+    td{
+        padding:10px;
+        border: 0.5px solid black;       
+    }
+
+   
+</style>
+
+
+</head>
+
+<body style="background-color:rgb(255, 255, 255)!important">
+
+    <!--Topo da Página-->
+    <header id="header">
+        <div id="pesquisar">
+            <h1 id="logo">ETE - Ministro Fernando Lyra</h1>
+
+            <form action="">
+                <input type="search" name="pesquisar" placeholder="       O que você está procurando?">
+                <input type="submit" value="pesquisar" id="input-submit-pesquisar">
+            </form>
+
+        </div>
+    </header>
+    <nav>
+        <div id="menu">
+            <a href=""><span>HOME</span></a>
+            <a href="contato.html"><span>CONTATO</span></a>
+            <a href="https://createwebmobile.com.br/" target="blank"><span>SOBRE</span></a>
+            <a href="tabelas.html" target="blank"><span>TABELAS</span></a>
+        </div>
+    </nav>
+
+    <!--Corpo Principal-->
+    <main>
+<div id="div-tabela">
+<button type="button" onclick="buscarProduto();">Carregar Tabela</button> 
+</div>
+        <!--Seção do formulário-->
+        <section>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Foto</th>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>    
+
+            </table>
+        </section>
+
+        <!--Footer-->
+        <footer style="position:fixed; bottom: 0;">
+            <!--Código do símbolo do Copyright = 00169-->
+            <h4>Copyright © - Desenvlvedor: Luciano Silva</h4>
+        </footer>
+
+    </main>
+
+    <script src="scripts.js"></script>
+
+    <!--
+    <script>         
+
+        function alterar_back_titulo(){
+            let back_titulo = document.getElementById('botao');
+            back_titulo.style.backgroundColor = '#000';
+        }
+
+        function padrão_back_titulo(){
+            let back_titulo = document.getElementById('botao');
+            back_titulo.style.backgroundColor = '#9125f0';
+        }
+
+    </script>
+-->
+
+</body>
+
+</html>
