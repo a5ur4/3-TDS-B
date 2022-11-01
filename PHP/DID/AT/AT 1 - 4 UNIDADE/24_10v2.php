@@ -51,34 +51,32 @@ function MenuCadst_prof()
 {
     echo "===Menu Cadastro===" . PHP_EOL;
     $nome_prof = readline("Digite o NOME do professor: ");
+    if ($nome_prof == null) {
+        echo "O nome não pode ser nulo, tente novamente" . PHP_EOL;
+        MenuCadst_prof();
+    }
     $salario_prof = readline("Digite o SALÁRIO do professor: ");
 
     popen('cls', 'w');
     CadastrarProfessor($nome_prof, $salario_prof);
-
-    $enter = readline("Click na tecla 'Enter' para continuar...");
-    if ($enter != null) {
-        echo "Isso não é uma opção invalida" . PHP_EOL;
-        exit;
-    }
+    readline("Click na tecla 'Enter' para continuar...");
 }
 
 function MenuCadastro()
 {
     echo "===Menu Cadastro===" . PHP_EOL;
     $nome = readline("Digite o NOME do aluno: ");
+    if ($nome == null) {
+        echo "O nome não pode ser nulo, tente novamente" . PHP_EOL;
+        MenuCadastro();
+    }
     $turma = readline("Digite a TURMA do aluno: ");
     $curso = readline("Digite o CURSO do aluno: ");
     $mensalidade = readline("Digite a MENSALIDADE do aluno: ");
 
     popen('cls', 'w');
     CadastrarAluno($nome, $turma, $curso, $mensalidade);
-
-    $enter = readline("Click na tecla 'Enter' para continuar...");
-    if ($enter != null) {
-        echo "Isso não é uma opção invalida" . PHP_EOL;
-        exit;
-    }
+    readline("Click na tecla 'Enter' para continuar...");
 }
 
 function MenuListar()
@@ -92,11 +90,7 @@ function MenuListar()
         echo "Curso: " . $aluno['Curso'] . PHP_EOL;
         echo "Mensalidade: R$" . $aluno['Mensalidade'] . PHP_EOL;
     }
-    $enter = readline("Click na tecla 'Enter' para continuar...");
-    if ($enter != null) {
-        echo "Isso não é uma opção invalida" . PHP_EOL;
-        exit;
-    }
+    readline("Click na tecla 'Enter' para continuar...");
 }
 
 function MenuListar_prof()
@@ -108,11 +102,7 @@ function MenuListar_prof()
         echo "Nome: " . $professor['Nome_prof'] . PHP_EOL;
         echo "Salário: R$" . $professor['Salario'] . PHP_EOL;
     }
-    $enter = readline("Click na tecla 'Enter' para continuar...");
-    if ($enter != null) {
-        echo "Isso não é uma opção invalida" . PHP_EOL;
-        exit;
-    }
+    readline("Click na tecla 'Enter' para continuar...");
 }
 
 function MenuExcluir()
@@ -133,11 +123,7 @@ function MenuExcluir()
         popen('cls', 'w');
         unset($AlunosMemory[$resultadoBusca]);
         echo "Registro excluido com sucesso !!" . PHP_EOL;
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     }
 }
 
@@ -150,20 +136,12 @@ function MenuExcluir_prof()
     $resultadoBusca = pegarIndiceProfessorArrayPeloNome($nomeExclusão);
     if ($resultadoBusca == -1) {
         readline("!!!!!  Nome Invalido !!!!!");
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     } else {
         popen('cls', 'w');
         unset($ProfessorMemory[$resultadoBusca]);
         echo "Registro excluido com sucesso !!" . PHP_EOL;
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     }
 }
 
@@ -176,11 +154,7 @@ function MenuAlterar()
     $resultadoBusca = pegarIndiceAlunoArrayPeloNome($nomeExclusão);
     if ($resultadoBusca == -1) {
         echo "!!!!!  Nome Invalido !!!!!" . PHP_EOL;
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     } else {
         popen('cls', 'w');
         $dadosAntigos = $AlunosMemory[$resultadoBusca];
@@ -194,11 +168,7 @@ function MenuAlterar()
         $AlunosMemory[$resultadoBusca]['Curso'] = $curso != "" ? $curso : $dadosAntigos['Curso'];
         $AlunosMemory[$resultadoBusca]['Mensalidade'] = $mensalidade != "" ? $mensalidade : $dadosAntigos['Mensalidade'];
         echo "Registro atualizado com sucesso !!" . PHP_EOL;
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     }
 }
 
@@ -210,11 +180,7 @@ function MenuAlterar_prof()
     $resultadoBusca = pegarIndiceProfessorArrayPeloNome($nomeExclusão);
     if ($resultadoBusca == -1) {
         echo "!!!!!  Nome Invalido !!!!!" . PHP_EOL;
-        $enter = readline("Click na tecla 'Enter' para continuar...");
-        if ($enter != null) {
-            echo "Isso não é uma opção invalida" . PHP_EOL;
-            exit;
-        }
+        readline("Click na tecla 'Enter' para continuar...");
     } else {
         popen('cls', 'w');
         $dadosAntigos = $ProfessorMemory[$resultadoBusca];
@@ -270,7 +236,8 @@ function verificarOpcaoMenu($opcao)
     }
 }
 
-function calcularSalarioProf() {
+function calcularSalarioProf()
+{
     global $AlunosMemory;
     foreach ($AlunosMemory as $aluno) {
         global $mensalidadetotal;
@@ -292,13 +259,8 @@ function calcularSalarioProf() {
     } else {
         echo 'A mensalidade dos alunos é maior (ou igual) que o salário dos professores, é possível pagar os professores!' . PHP_EOL;
     }
-    $enter = readline("Click na tecla 'Enter' para continuar...");
-    if ($enter != null) {
-        echo "Isso não é uma opção invalida" . PHP_EOL;
-        exit;
-    }
+    readline("Click na tecla 'Enter' para continuar...");
 }
-
 
 while ($opcao != 10) {
     echo "====Menu====" . PHP_EOL;
