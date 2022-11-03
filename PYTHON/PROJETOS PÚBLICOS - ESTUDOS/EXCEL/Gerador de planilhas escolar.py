@@ -3,6 +3,15 @@ import pyfiglet
 
 i = 0
 
+aluno = None
+telefone = None
+nota_1 = None
+nota_2 = None 
+nota_3 = None
+nota_4 = None
+media = None
+media_final = None
+
 def cadastro():
     bem_vindo_text = pyfiglet.figlet_format("BEM VINDO", font = "slant"  )
     print(bem_vindo_text)  
@@ -57,6 +66,9 @@ def cadastro():
                             if cell.value == aluno:
                                 cell.value = nome_alter
                     planilha.save('Notas alunos.xlsx')
+                else:
+                    print('Nome invalido, digite novamente')
+                    return
             alterar_nome()
             menu()
                 
@@ -70,6 +82,9 @@ def cadastro():
                             if cell.value == matricula:
                                 cell.value = mat_alter
                     planilha.save('Notas alunos.xlsx')
+                else:
+                    print('Matricula invalida, digite novamente')
+                    return
             alterar_matricula()
             menu()
 
@@ -83,6 +98,9 @@ def cadastro():
                             if cell.value == telefone:
                                 cell.value = tel_alter
                     planilha.save('Notas alunos.xlsx')
+                else:
+                    print('Telefone invalido, digite novamente')
+                    return
             alterar_telefone()
             menu()
 
@@ -101,6 +119,9 @@ def cadastro():
                             if cell.value == media_final:
                                 cell.value = med_alter_final
                     planilha.save('Notas alunos.xlsx')
+                else:
+                    print('Media invalida, digite novamente')
+                    return
             alterar_media()
             menu()
 
