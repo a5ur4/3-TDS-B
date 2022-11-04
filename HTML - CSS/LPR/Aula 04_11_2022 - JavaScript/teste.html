@@ -21,14 +21,27 @@
 
         main{
             align-items: center;
-            text-align: left;
+            text-align: center;
             margin: auto;
             width: 180px;
+            border: 1px black solid;
+            height: 500px;
+            width: 400px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
         }
 
         main input{
             height: 30px;
             width: 190px;
+        }
+
+        main div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         main div button{
@@ -48,15 +61,25 @@
         main div button:hover{
             border-radius: 10px;
             margin-left: 10px;
-            margin-right: 10px;
             transition: 0.5s;
         }
 
-        #box{
+        #box {
             width:200px;
             height: 100px;
             color: white;
             background-color: black;
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+
+        #box_2{
+            width:200px;
+            height: 100px;
+            color: white;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
             border-radius: 10px;
             text-align: center;
             align-items: center;
@@ -76,6 +99,8 @@
             Nome Completo:
         </label>
         <input type="text" id="nome">
+        <br>
+        <br>
         <div>
             <button onclick="insert_value()" id="insere_valor">Insire Valor</button>
             <button onclick="show_value()">Pega valor</button>
@@ -103,8 +128,17 @@
             let inputNome = document.getElementById("nome").value = "";
         }
 
+        var insert = true;
         function insert_text(){
-            document.getElementById("box").innerText = "Texto inserido dinamicamewnte";
+            if (insert == true){
+                document.getElementById("box").innerText = "Texto inserido dinamicamente";
+                document.getElementById("box").id = "box_2";
+                insert = false;
+            } else {
+                document.getElementById("box_2").id = "box";
+                document.getElementById("box").innerText = "";
+                insert = true;
+            }
         }
 
         var troca_fundo = true;
