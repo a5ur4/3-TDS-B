@@ -1,0 +1,1 @@
+alert("O botão 1 foi clicado.");

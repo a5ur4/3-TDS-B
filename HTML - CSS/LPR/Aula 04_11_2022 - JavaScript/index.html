@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="style.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+        }
+
+        header{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            height: 50px;
+        }
+
+        main div ol{
+            align-items: center;
+            text-align: left;
+            margin: auto;
+            width: 180px;
+        }
+
+        main div button{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            height: 20px;
+        }
+
+        main div button:hover{
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Aula de java script</h2>
+    </header>
+    <main>
+        <h2>Capturando click em um botão com:</h2>
+        <br>
+        <div>
+            <ol>
+                <li>onclick()</li>
+                <li>getElementById()</li>
+                <li>getElementByClassName()</li>
+                <li>querySelector()</li>
+            </ol>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button id="botao1" onclick="testarClick();">onclick()</button>
+            <button id="botao2" onclick="testarCLick2()">getElementById()</button>
+            <button id="botao3" onclick="testarClick3()">getElementByClassName()</button>
+            <button id="botao4">querySelector()</button>
+        </div>
+    </main>
+    <script>
+        function testarClick(){
+            alert("Funcionou bizunga");
+        }
+
+        function testarCLick2(){
+            alert("Funcionou marsuial bandeira")
+        }
+
+        function testarClick3(){
+            window.location.href = "https://media.tenor.com/MXpTxtjJQN0AAAAd/breakdance-cat-electronic-jazz.gif"
+        }
+    </script>
+</body>
+</html>

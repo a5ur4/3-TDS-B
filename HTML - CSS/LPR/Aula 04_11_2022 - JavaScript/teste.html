@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+
+        header{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            height: 50px;
+            text-align: center;
+        }
+
+        main{
+            align-items: center;
+            text-align: left;
+            margin: auto;
+            width: 180px;
+        }
+
+        main input{
+            height: 30px;
+            width: 190px;
+        }
+
+        main div button{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            height: 40px;
+            width: 200px;
+            margin-top: 10px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        main div button:hover{
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: 0.5s;
+        }
+
+        #box{
+            width:200px;
+            height: 100px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aula JavaScript</h1>
+        <br>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main>
+        <label>
+            Nome Completo:
+        </label>
+        <input type="text" id="nome">
+        <div>
+            <button onclick="insert_value()" id="insere_valor">Insire Valor</button>
+            <button onclick="show_value()">Pega valor</button>
+            <button onclick="reset()">Limpar Valor</button>
+            <br>
+            <div id="box"></div>
+            <br>
+            <button onclick="insert_text()">Inserir valor</button>
+            <button onclick="change_color()">Trocar cor de fundo</button>
+            <button onclick="random_color()">Trocar cor aleatóroia</button>
+        </div>
+    </main>
+    <script>
+        function insert_value(){
+            var texto = "outro nome"
+            let inputNome = document.getElementById("nome").value = texto;
+        }
+
+        function show_value(){
+            let inputNome = document.getElementById("nome").value;
+            alert(inputNome)
+        }
+
+        function reset(){
+            let inputNome = document.getElementById("nome").value = "";
+        }
+
+        function insert_text(){
+            document.getElementById("box").innerText = "Texto inserido dinamicamewnte";
+        }
+
+        var troca_fundo = true;
+        function change_color(){
+            if (troca_fundo == true) {
+                document.body.style.backgroundColor = "green";
+                troca_fundo = false;
+        } else {
+            document.body.style.backgroundColor = "white";
+            troca_fundo = true;
+        }
+    }
+
+    function random_color(){
+        var cores = ['blue', 'green', 'red', 'purple', 'orange'];
+        var index = Math.floor(Math.random() * cores.length);
+        var cor = cores[index];
+        document.body.style.backgroundColor = cor;
+    }
+    </script>
+</body>
+</html>
