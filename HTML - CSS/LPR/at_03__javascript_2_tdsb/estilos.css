@@ -1,0 +1,268 @@
+/*Reset de css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Altera a cor de fundo*/
+body{
+    background-color: rgb(223, 222, 222);
+}
+/*Estilos para o header*/
+#header{
+    background-color:#5a2d82;
+    width: 100%;
+    height:60px;
+    margin: 0px
+}
+
+#logo{
+    
+   color:white;
+   line-height: 60px;
+   margin-left: 20px;
+   font-size: x-large;
+}
+
+/*Estilos para a div do form pesquisar*/
+#pesquisar{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    line-height: 58px;    
+}
+
+/*Estilos para o campo pesquisar*/
+input[type=search]{
+   
+    width:400px;    
+    height:40px;
+    border-radius: 10px;
+    border:0;
+    transition: 0.5s;
+    outline: none;
+    padding: 4px;
+   
+}
+
+/*Estilos para o campo pesquisar quando receber o foco*/
+input[type=search]:focus{   
+   border: 3px solid #555;   
+}
+
+/*Estilos para o botão submit pesquisar*/
+#input-submit-pesquisar{
+    width:70px;  
+    height: 40px;
+    border-radius: 10px;
+    border:0;
+    color: #5a2d82;
+    font-weight: bold;
+    background-color: white;
+    transition: 0.5s;
+   
+}
+
+/*Estilos para o botão submit pesquisar quando o mouse estiver sobre o mesmo*/
+#input-submit-pesquisar:hover{
+    width:70px;  
+    height: 40px;
+    border-radius: 10px;
+    border:0;
+    color:white;
+    font-weight: bold;
+    background-color: #5f7fe9;
+}  
+
+/*Estilos para a seção do formulário principal*/
+section{
+    display: flex;
+    justify-content:center;
+}
+
+#formulario{    
+    margin-top: 40px;
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    border-bottom: 10px solid blueviolet;
+    border-radius: 0 0 6px 6px;
+    
+}
+
+.input{
+    width: 760px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 2px;    
+}
+
+label{
+    padding-left: 20px;       
+}
+
+#titulo-formulario{
+    text-align: center;   
+    background-color: #9125f0;
+    color: white;
+    margin-bottom: 6px;   
+}
+
+#footer-form{
+
+    display: flex;
+    justify-content:flex-end;   
+    margin-top: 40px;
+}
+
+#footer-form input{
+    padding: 6px;
+    margin-right: 4px;
+   background-color:#5a2d82;
+   color: white;
+   border: 0;  
+   transition: 0.5s;
+   box-shadow: 4px 6px 10px gray;
+}
+
+#footer-form input:hover{
+
+    background-color:#7a2dbd;
+    
+}
+
+select{
+    margin-left: 20px;
+    margin-top: 6px;
+    width: 765px;
+    height: 32px
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color:#5a2d82;
+    margin-top: 60px;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+footer h4{
+
+    text-align: center;
+    color: white;
+    line-height: 60px;
+    font-weight: 100;
+}
+
+
+
+button{
+   background-color:#5a2d82;
+   color: white;
+   border: 0;  
+   transition: 0.5s;
+   padding: 0 2px;
+   margin-left: 4px;
+   box-shadow: 4px 6px 10px gray;
+   padding: 0 4px;
+   
+}
+
+button:hover{
+   background-color:#9125f0;
+    
+}
+
+#btn-alterar-cor{
+   background-color:black"
+}
+
+#btn-alterar-cor:hover{
+   background-color:rgb(49, 49, 49)!important;
+}
+
+/*Estilos para o menu*/
+ #menu{
+    display:flex;
+    justify-content:center;
+    background-color: #302f31;;
+    height:40px;
+   
+ }
+#menu h3 {
+    color: white;
+    text-decoration: none;
+    padding: 0 12px;
+    line-height: 42px; 
+    transition: 0.5s;    
+
+   
+}
+
+#menu a:hover{
+    background-color:#5a2d82
+}
+/*Fim menu*/
+
+table{
+    width: 60%;
+    margin-bottom: 60px;
+}
+
+#notas {
+    display: flex;
+    justify-content: space-around;
+}
+
+#notas input {
+    width: 100px;
+    height: 30px;
+    padding: 0 4px;
+    transition: 0.5s;
+    text-align: center;
+    margin-top: 12px;
+
+}
+
+#notas input:focus {
+    outline: none !important;
+    border: 1px solid rgb(165, 123, 238);
+    box-shadow: 0 0 10px #719ECE;
+    
+}
+
+fieldset {
+    margin: 20px 17px 0px 17px;
+    border-radius: 4px;
+   
+}
+
+legend{
+     padding: 0 6px;
+}
+
+#calcula-media{
+    width: 766px;
+    height:60px;
+    margin-left: 16px;
+    margin-top: 40px;
+    font-size: larger;
+    border-radius: 10px;
+    
+}
+
+#resultado{
+    width: 766px;
+    height:60px;
+    margin-left: 16px;
+    margin-top: 30px;
+    font-size: larger;
+    border: 2px solid blueviolet;      
+    text-align: center;
+    line-height: 60px;    
+    background: black; 
+    color: white;
+}

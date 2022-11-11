@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <title>AT 03 - JavaScript</title>
+</head>
+
+<body>
+
+    <!--Topo da Página-->
+    <header id="header">
+        <div id="pesquisar">
+            <h1 id="logo">ETE - Ministro Fernando Lyra</h1>
+        </div>
+    </header>
+
+    <!--Menu-->
+    <nav>
+        <div id="menu">
+            <h3><span>AT 03 - JavaScript (10/11/2022)</span></h3>
+        </div>
+    </nav>
+
+    <!--Corpo Principal-->
+    <main>
+        <!--Seção do formulário-->
+        <section>
+            <div id="formulario">
+                <div id="titulo-formulario">
+                    <h1 id="botao">Cadastrar Notas do Aluno</h1>
+                </div>
+
+                <!--Formulário-->
+                <form id="form">
+                    <!--Nome-->
+                    <label for="nome">Nome Completo:</label>
+                    <br>
+                    <input type="text" name="nome" id="nome" class="input" placeholder="Digite seu nome" maxlength="10"
+                        required minlength="3">
+                    <br>
+                    <fieldset>
+                        <legend>Notas do Aluno</legend>
+
+                        <div id="notas">
+                            <input type="number" name="nome" id="nota1" placeholder="Nota 1" maxlength="10" required
+                                minlength="3" min="0" max="10">
+                            <input type="number" name="nome" id="nota2" placeholder="Nota 2" maxlength="10" required
+                                minlength="3" min="0" max="10">
+                            <input type="number" name="nome" id="nota3" placeholder="Nota 3" maxlength="10" required
+                                minlength="3" min="0" max="10">
+                            <input type="number" name="nome" id="nota4" placeholder="Nota 4" maxlength="10" required
+                                minlength="3" min="0" max="10">
+                        </div>
+
+                        <br>
+
+                    </fieldset>
+
+                    <div id="resultado">
+                        <span id="media">MÉDIA = ?</span>
+                    </div>
+
+                    <div>
+                        <button type="button" onClick="calcularMedia();" id="calcula-media">CALCULAR</button>
+                    </div>
+                </form>
+                <!--
+                <div style="display: flex; justify-content:center; margin-top:30px">
+                    <button type="button" id="evento-click">CALCULAR</button>
+                </div>
+                -->
+            </div>
+
+
+        </section>
+
+        <!--Footer-->
+        <footer>
+            <!--Código do símbolo do Copyright = 00169-->
+            <h4>Copyright © - Desenvlvedor: Luciano Silva</h4>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
