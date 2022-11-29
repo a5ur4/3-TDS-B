@@ -1,440 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
-    <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_110324.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+            padding: 0 auto;
+        }
 
+        header{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            height: 50px;
+            text-align: center;
+        }
+
+        main{
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            width: 180px;
+            border: 1px black solid;
+            height: 500px;
+            width: 400px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        main input{
+            height: 30px;
+            width: 190px;
+        }
+
+        main div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main div button{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            height: 40px;
+            width: 200px;
+            margin-top: 10px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        main div button:hover{
+            border-radius: 10px;
+            margin-left: 10px;
+            transition: 0.5s;
+        }
+
+        #box {
+            width:200px;
+            height: 100px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+
+        #box_2{
+            width:200px;
+            height: 100px;
+            color: white;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
 <body>
     <header>
-        <h2>Portifólio</h2>
-        <div>
-            <li>
-                <p onClick="scroll_home()">Home</p>
-            </li>
-            <li>
-                <p onClick="scroll_projects()">Projetos</p>
-            </li>
-            <li>
-                <p onClick="scroll_services()">Serviços</p>
-            </li>
-            <li>
-                <p onClick="scroll_titles()">Títulos</p>
-            </li>
-            <li>
-                <p onClick="scroll_contact()">Contato</p>
-            </li>
-        </div>
+        <h1>Aula JavaScript</h1>
+        <br>
     </header>
+    <br>
+    <br>
+    <br>
     <main>
+        <label>
+            Nome Completo:
+        </label>
+        <input type="text" id="nome">
         <br>
         <br>
-        <br>
-        <article>
+        <div>
+            <button onclick="insert_value()" id="insere_valor">Insire Valor</button>
+            <button onclick="show_value()">Pega valor</button>
+            <button onclick="reset()">Limpar Valor</button>
             <br>
-            <div class="spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div id="box"></div>
             <br>
-            <hr class="linha">
-            <hr id="linha_middle">
-            <h1>“I came to Rome when it was a city of stone <br> ... and left it a city of marble”.</h1>
-            <h1>-Julius Caesar</h1>
-            <hr id="linha_middle">
-            <hr class="linha">
-        </article>
-        <br>
-        <section id="section_1">
-            <div>
-                <img src="https://i.pinimg.com/736x/f3/6b/1e/f36b1e74b62eb21e6c0232ec5b3e5125.jpg" alt="">
-            </div>
-            <nav>
-                <h3>Olá, meu nome é</h3>
-                <h2>Pedro Arthur B. Moreira</h2>
-                <h3>Programador junior, praticante de artes marciais e ilustrador.</h3>
-                <div>
-                    <br>
-                    <button>
-                        <a href="https://github.com/a5ur4" target="_blank">Confira meu trabalho</a>
-                    </button>
-                </div>
-            </nav>
-        </section>
-        <br>
-        <section id="section_2">
-            <div>
-                <hr class="linha">
-                <hr id="linha_middle">
-                <hr class="linha">
-            </div>
-            <br>
-            <br>
-            <div id="cards">
-                <nav class="card">
-                    <br>
-                    <h1>HTML 5</h1>
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>CSS</h1>
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>JS</h1>
-                    <img src="https://pcodinomebzero.neocities.org/Imagens/javascript1.png" alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>PHP</h1>
-                    <img src="https://assets-global.website-files.com/5e665d441fbc681e68fe21f6/62ec2850d64065681793077a_6238a90433df75bbdda48fe3_6233833284ad64063c019f06_tech-php.png"
-                        alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-            </div>
-            <br>
-            <div id="cards_2">
-                <nav class="card">
-                    <br>
-                    <h1>PYTHON</h1>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png"
-                        alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>MY SQL</h1>
-                    <img src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-cdb-for-mysql-7.png"
-                        alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>C - Em estudo</h1>
-                    <img src="https://www.britefish.net/wp-content/uploads/2019/07/logo-c-1.png" alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-                <nav class="card">
-                    <br>
-                    <h1>DJANGO - Em estudo</h1>
-                    <img src="https://webme.ie/wp-content/uploads/2019/08/How-to-run-a-python-django-app-in-docker.png"
-                        alt="">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-                </nav>
-            </div>
-            <br>
-            <br>
-            <div>
-                <hr class="linha">
-                <hr id="linha_middle">
-                <hr class="linha">
-            </div>
-        </section>
-        <section id="section_3">
-            <br>
-            <h1>Projetos</h1>
-            <hr class="linha">
-            <hr id="linha_middle">
-            <br>
-            <br>
-            <br>
-            <div class="i">
-                <div class="projects">
-                    <br>
-                    <h2>login Google <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
-                            alt=""></h2>
-                    <h5>HTML - CSS</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/HTML%20-%20CSS/LPR/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/Login_GOOGLE/login_google.html"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-                <div class="projects">
-                    <br>
-                    <h2>Bhaskara <img
-                            src="https://th.bing.com/th/id/R.20b410ec3d145d10f470b8adb25aba45?rik=BfUtYRsb73hIJA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_127435.png&ehk=6%2bk8knqFJlOQlXz9cC3nTENF1d8zUfJGo0FELjYUgUc%3d&risl=&pid=ImgRaw&r=0"
-                            alt=""></h2>
-                    <h5>PYTHON</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/PYTHON/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/BHASKARA/Calc_bask_delt.py"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-                <div class="projects">
-                    <br>
-                    <h2>Arranjo e combinação <img
-                            src="https://th.bing.com/th/id/R.20b410ec3d145d10f470b8adb25aba45?rik=BfUtYRsb73hIJA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_127435.png&ehk=6%2bk8knqFJlOQlXz9cC3nTENF1d8zUfJGo0FELjYUgUc%3d&risl=&pid=ImgRaw&r=0"
-                            alt=""></h2>
-                    <h5>PYTHON</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/PYTHON/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/ARRANJO%20-%20COMBINA%C3%87%C3%83O/arranjo_combina%C3%A7%C3%A3o.py"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="i">
-                <div class="projects">
-                    <br>
-                    <h2>Planilha escolar <img
-                            src="https://logodownload.org/wp-content/uploads/2020/04/excel-logo-1-2048x1905.png" alt="">
-                    </h2>
-                    <h5>PYTHON - Inacabado</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/PYTHON/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/EXCEL/Gerador%20de%20planilhas%20escolar.py"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-                <div class="projects">
-                    <br>
-                    <h2>Progressão Arit-Geom <img
-                            src="https://th.bing.com/th/id/R.20b410ec3d145d10f470b8adb25aba45?rik=BfUtYRsb73hIJA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_127435.png&ehk=6%2bk8knqFJlOQlXz9cC3nTENF1d8zUfJGo0FELjYUgUc%3d&risl=&pid=ImgRaw&r=0"
-                            alt=""></h2>
-                    <h5>PYTHON</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/PYTHON/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/PG%20-%20PA/Calc_PG-PA.py"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-                <div class="projects">
-                    <br>
-                    <h2>Determinantes <img
-                            src="https://th.bing.com/th/id/R.20b410ec3d145d10f470b8adb25aba45?rik=BfUtYRsb73hIJA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_127435.png&ehk=6%2bk8knqFJlOQlXz9cC3nTENF1d8zUfJGo0FELjYUgUc%3d&risl=&pid=ImgRaw&r=0"
-                            alt=""></h2>
-                    <h5>PYTHON</h5>
-                    <nav>
-                        <br>
-                        <a href="https://github.com/a5ur4/2-TDS-B/blob/09c278d5401f4494fff82b8f9ad104c3aa34f62f/PYTHON/PROJETOS%20P%C3%9ABLICOS%20-%20ESTUDOS/MATRIZES/delt_Aij_Dij.py"
-                            target="_blank">Clique aqui <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                alt=""></a>
-                    </nav>
-                </div>
-            </div>
-            </div>
-            <br>
-            <hr id="linha_middle">
-            <hr class="linha">
-        </section>
-        <section id="section_4">
-            <br>
-            <h1>Serviços</h1>
-            <hr class="linha">
-            <hr id="linha_middle">
-            <br>
-            <br>
-            <div id="front_container">
-                <div class="container">
-                    <br>
-                    <button><img src="https://cdn-icons-png.flaticon.com/512/69/69045.png" alt=""></button>
-                    <h4>Desenvolvedor web</h4>
-                    <h5>Front-end e Back-end</h5>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur</h5>
-                </div>
-                <hr>
-                <div class="container">
-                    <br>
-                    <button><img src="https://static.thenounproject.com/png/4074741-200.png" alt=""></button>
-                    <h4>Lutador</h4>
-                    <h5>Jiu-Jitsu e Judô</h5>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur</h5>
-                </div>
-                <hr>
-                <div class="container">
-                    <br>
-                    <button><img
-                            src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/illustration-icon.png"
-                            alt=""></button>
-                    <h4>Ilustrador</h4>
-                    <h5>Tradicional e digital</h5>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur</h5>
-                </div>
-            </div>
-            <br>
-            <br>
-            <hr id="linha_middle">
-            <hr class="linha">
-        </section>
-        <br>
-        <br>
-        <section id="section_5">
-            <section id="titles">
-                <div>
-                    <br>
-                    <h2>Títulos</h2>
-                    <br>
-                    <dl>
-                        <dt id="gold">Ouro</dt>
-                        <br>
-                        <dd> 2x Escolar municipal de Judô</dd>
-                        <dd> 1x Liga escolar municipal de Judô</dd>
-                        <dd> 1x Circuito Pernambucano de Jiu-Jitsu</dd>
-                        <br>
-                        <br>
-                        <hr>
-                        <br>
-                        <dt id="silver">Prata</dt>
-                        <br>
-                        <dd> 1x JEPS 2022</dd>
-                        <dd> 1x Escolar municipal de Judô</dd>
-                        <dd> 1x Open agreste de Jiu-Jitsu</dd>
-                        <dd> 1x Open ronin de Jiu-Jitsu</dd>
-                        <br>
-                        <br>
-                        <hr>
-                        <br>
-                        <dt id="copper">Bronze</dt>
-                        <br>
-                        <dd> 1x Absoluto Open ronin de Jiu-Jitsu</dd>
-                    </dl>
-                </div>
-                <br>
-            </section>
-            <section id="video">
-                <hr class="linha">
-                <hr id="linha_middle">
-                <br>
-                <iframe width="800" height="400" src="https://www.youtube.com/embed/fnP4gGL-AjU"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <br>
-                <br>
-                <hr id="linha_middle">
-                <hr class="linha">
-            </section>
-        </section>
-        <br>
-        <section id="section_6">
-            <br>
-            <h1>Contato</h1>
-            <hr class="linha">
-            <hr id="linha_middle">
-            <br>
-            <br>
-            <nav id="i_sc_6">
-                <div id="box_contact">
-                    <br>
-                    <br>
-                    <nav class="contact">
-                        <img src="https://th.bing.com/th/id/R.9f705111f037ae799f0bcf9633be3ca1?rik=S1APAPrO4DitgA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_427156.png&ehk=gaOCv7%2fvVMvnvRnnXlwM6oMhJy4rgItgQs7c8WTNijA%3d&risl=&pid=ImgRaw&r=0"
-                            alt="">
-                        <h3> Whatsapp <br><a href="">(81) 9 9999-9999</a></h3>
-                    </nav>
-                    <br>
-                    <br>
-                    <nav class="contact">
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
-                        <h3> Github <br><a href="https://github.com/a5ur4">_a5ur4</a></h3>
-                    </nav>
-                    <br>
-                    <br>
-                    <nav class="contact">
-                        <img src="https://th.bing.com/th/id/R.b2cfbf8d006c960619263d3ab7a21d0a?rik=P6gst49%2flsgsvA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_386071.png&ehk=Fv%2bZhOCFQ70o9Bkuy7s0hwF2L34juzy2RFwOaNvkkQ0%3d&risl=&pid=ImgRaw&r=0"
-                            alt="">
-                        <h3> E-mail <br><a href="https://github.com/a5ur4">unknown_000@gmail.com</a></h3>
-                    </nav>
-                    <br>
-                    <br>
-                    <nav class="contact">
-                        <img src="https://th.bing.com/th/id/R.16bdc69fafdb5685f5880dfc57fd0341?rik=%2ft4%2fZF3DYXDVXA&pid=ImgRaw&r=0"
-                            alt="">
-                        <h3> Localidade <br><a
-                                href="https://www.google.com/maps/d/viewer?mid=1yhkbC2iN1pvRFv80P8NkY21wGV0&ll=-8.290285681385765%2C-35.97760300000001&z=15">Caruaru
-                                - PE</a></h3>
-                    </nav>
-                </div>
-                <form>
-                    <nav>
-                        <div class="form__group field">
-                            <input required="" placeholder="Name" class="form__field" type="name" id="nome">
-                            <label class="form__label" for="name">Nome </label>
-                        </div>
-                        <div class="form__group field">
-                            <input required="" placeholder="Name" class="form__field" type="email">
-                            <label class="form__label" for="name">E-mail </label>
-                        </div>
-                    </nav>
-                    <br>
-                    <br>
-                    <br>
-                    <nav>
-                        <textarea name="mensagem" id="mensage" cols="30" rows="10"
-                            placeholder="Sua mensagem"></textarea>
-                    </nav>
-                    <br>
-                    <br>
-                    <button onclick="alert_login()" type="submit" value="Enviar">Enviar sua mensagem</button>
-                </form>
-            </nav>
-            <br>
-            <br>
-            <hr id="linha_middle">
-            <hr class="linha">
-            <footer>
-                <h4>Copyright © 2022 - _a5ur4</h4>
-            </footer>
-        </section>
+            <button onclick="insert_text()">Inserir valor</button>
+            <button onclick="change_color()">Trocar cor de fundo</button>
+            <button onclick="random_color()">Trocar cor aleatóroia</button>
+        </div>
     </main>
-</body>
+    <script>
+        function insert_value(){
+            var texto = "outro nome"
+            let inputNome = document.getElementById("nome").value = texto;
+        }
 
+        function show_value(){
+            let inputNome = document.getElementById("nome").value;
+            alert(inputNome)
+        }
+
+        function reset(){
+            let inputNome = document.getElementById("nome").value = "";
+        }
+
+        var insert = true;
+        function insert_text(){
+            if (insert == true){
+                document.getElementById("box").innerText = "Texto inserido dinamicamente";
+                document.getElementById("box").id = "box_2";
+                insert = false;
+            } else {
+                document.getElementById("box_2").id = "box";
+                document.getElementById("box").innerText = "";
+                insert = true;
+            }
+        }
+
+        var troca_fundo = true;
+        function change_color(){
+            if (troca_fundo == true) {
+                document.body.style.backgroundColor = "green";
+                troca_fundo = false;
+        } else {
+            document.body.style.backgroundColor = "white";
+            troca_fundo = true;
+        }
+    }
+
+    function random_color(){
+        var cores = ['blue', 'green', 'red', 'purple', 'orange'];
+        var index = Math.floor(Math.random() * cores.length);
+        var cor = cores[index];
+        document.body.style.backgroundColor = cor;
+    }
+    </script>
+</body>
 </html>
