@@ -1,4 +1,4 @@
-# Repositório do segundo TDS B 😄
+# Repositório do terceiro TDS B 😄
 
-Este repositório foi criado por alunos do segundo ano da Escola técnica estadual Ministro Fernando Lyra
+Este repositório foi criado por alunos do terceiro ano da Escola técnica estadual Ministro Fernando Lyra
 
