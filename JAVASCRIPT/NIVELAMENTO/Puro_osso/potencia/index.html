@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Potencia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <input type="number" id="quantidade">
+      <br />
+      <div id="container_potencia"></div>
+      <div id="container_enviar">
+        <button id="enviar">Enviar</button>
+      </div>
+      <p id="resultado"></p>
+    </section>
+    <script>
+      let quantidade = document.querySelector('#quantidade')
+      let enviar = document.querySelector('#enviar')
+      let container = document.querySelector('#container_potencia') 
+      let inputs
+      let resultado = document.querySelector("#resultado")
+
+      enviar.addEventListener('click', () => {
+        for (let i = 0; i < parseInt(quantidade.value); i++) {
+          container
+            .innerHTML += `
+              <input type="number" id="potencia${i}">
+              <br >
+            `
+          document.querySelector("#container_enviar").innerHTML = ""
+        }
+
+        container.innerHTML += '<button id="calcular">Calcular</button>'
+
+        let calcular = document.querySelector("#calcular")
+        let valores = []
+        
+        calcular.addEventListener('click', () => {
+          for (let i = 0; i < container.querySelectorAll("input").length; i++) {
+            valores.push(document.querySelector(`#potencia${i}`).value)
+            console.log(valores)
+          }
+
+          let valor_final = 0
+
+          for (let i = 0; i < valores.length; i++) {
+            let potencia_numero = parseInt(valores[i][valores[i].length - 1])
+            let resto_numero = parseInt(valores[i][0].slice(0, valores[i].length - 1))
+
+            valor_final += potencia_numero ** resto_numero
+            resultado.innerHTML = valor_final
+          }
+        })
+      })
+   </script>
+  </body>
+</html>

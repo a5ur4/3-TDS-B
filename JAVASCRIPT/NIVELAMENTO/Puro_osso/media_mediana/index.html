@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Media e Mediana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <div>
+        <input type="number" placeholder="Primeiro número" id="primeiro-valor">
+          <br>
+        <input type="number" placeholder="Segundo número" id="segundo-valor">
+          <br>
+        <button id="enviar">Enviar</button>
+          <br>
+        <span>Resultado: </span>
+      </div>
+    </section>
+    <script>
+      let primeiro_valor = document.querySelector("#primeiro-valor") 
+      let segundo_valor = document.querySelector("#segundo-valor")
+      let media
+      let mediana_array = [0]
+
+      document.querySelector('#enviar').addEventListener('click', () => {
+        let a = parseInt(primeiro_valor.value)
+        let b = parseInt(segundo_valor.value)
+        mediana_array[0] = 0
+        mediana_array.push(a)
+        mediana_array.push(b)
+
+        media = parseInt((a + b) / 2)
+
+        // descobrindo a mediana
+        let i = 0
+        while (true) {
+          mediana_array[0] = i
+          mediana_array.sort((a, b) => {
+            return a - b 
+          })
+          media = parseInt((a + b + i) / 3)
+          if (mediana_array[1] == media) {
+            alert('O valor de "C" é == ' + i)
+            location.reload()
+            break
+          }
+          else {
+            i++
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
