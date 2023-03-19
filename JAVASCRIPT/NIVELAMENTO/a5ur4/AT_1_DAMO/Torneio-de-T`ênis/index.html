@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneio de tênis</title>
+</head>
+
+<body>
+    <h1>Exercício 3 - Torneio de tênis</h1>
+    <label for="resultado1">1º jogo</label>
+    <input type="text" id="resultado1">
+    <br>
+    <label for="resultado2">2º jogo</label>
+    <input type="text" id="resultado2">
+    <br>
+    <label for="resultado3">3º jogo</label>
+    <input type="text" id="resultado3">
+    <br>
+    <label for="resultado4">4º jogo</label>
+    <input type="text" id="resultado4">
+    <br>
+    <label for="resultado5">5º jogo</label>
+    <input type="text" id="resultado5">
+    <br>
+    <label for="resultado6">6º jogo</label>
+    <input type="text" id="resultado6">
+    <br>
+    <button onclick="calcularResultado()">Enviar</button>
+    <h1 id="resposta"></h1>
+    <script>
+        function calcularResultado() {
+            let resultado1 = document.getElementById("resultado1").value;
+            let resultado2 = document.getElementById("resultado2").value;
+            let resultado3 = document.getElementById("resultado3").value;
+            let resultado4 = document.getElementById("resultado4").value;
+            let resultado5 = document.getElementById("resultado5").value;
+            let resultado6 = document.getElementById("resultado6").value;
+            let resultados = [resultado1, resultado2, resultado3, resultado4, resultado5, resultado6];
+            let counter = 0;
+            for (let i = 0; i < resultados.length; i++) {
+                if (resultados[i] === 'v') {
+                    counter++;
+                }
+            }
+            let resposta = document.querySelector('#resposta');
+            if (counter === 6 || counter === 5) {
+                resposta.innerText = 1;
+            } else if (counter === 3 || counter === 4) {
+                resposta.innerText = 2;
+            } else if (counter === 1 || counter === 2) {
+                resposta.innerText = 3;
+            } else {
+                resposta.innerText = -1;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!--
+    Alunos: Pedro Bastos, Carlos Henrique, João Augusto, Arthur Heber, Pamela, Guilherme Macêdo, Angélica
+    Turma: 3° TDS - B
+-->

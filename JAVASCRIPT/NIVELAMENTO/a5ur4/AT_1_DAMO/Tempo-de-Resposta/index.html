@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Tempo de resposta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <textarea></textarea>
+  <br>
+  <button>Enviar</button>
+  <br>
+  <p></p>
+  <script>
+    const entrada = document.querySelector('textarea');
+    const saida = document.querySelector('p');
+    let amigos = [];
+
+    const keys = {
+      R(int) {
+        if (!amigos[int]) {
+          amigos[int] = [0, false];
+        }
+        console.log(`Recebeu uma mensagem do amigo ${int}. Agora o amigo ${int} esperou ${amigos[int][0]} segundos.`);
+        if (amigos[int][1]) {
+          amigos[int][1] = false;
+        }
+      },
+      E(int) {
+        console.log(amigos);
+        if (amigos[int] && amigos[int][1] === false) {
+          console.log(`Enviou uma mensagem ao amigo ${int}. Agora o amigo ${int} esperou ${amigos[int][0]} segundos.`);
+          amigos[int][1] = true;
+        }
+      },
+      T(int) {
+        for (let i = 0; i < amigos.length; i++) {
+          if (amigos[i]) {
+            console.log(`Se passou ${int} segundos. Agora o amigo ${i} esperou ${amigos[i][0]} segundos.`);
+            if (!amigos[i][1]) {
+              amigos[i][0] += int;
+            }
+          }
+        }
+      }
+    };
+
+    document.querySelector('button').addEventListener('click', () => {
+      amigos = [];
+      const registros = entrada.value.split('\n').map(registro => registro.split(' '));
+
+      for (let i = 1; i < registros.length; i++) {
+        try {
+          const [operacao, amigo] = registros[i];
+          const intAmigo = parseInt(amigo);
+          if (!Number.isInteger(intAmigo)) {
+            throw new Error(`Amigo inválido: ${amigo}`);
+          }
+          keys[operacao](intAmigo);
+          if (operacao !== 'T' && amigos[intAmigo] && !amigos[intAmigo][1]) {
+            amigos[intAmigo][0]++;
+          } else {
+            console.log('Este amigo já foi respondido!');
+          }
+          if (i === registros.length - 1) {
+            console.log('Chegou aqui!');
+            for (let j = 0; j < amigos.length; j++) {
+              if (amigos[j] && !amigos[j][1]) {
+                amigos[j][0] = -1;
+              }
+            }
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      console.log(amigos);
+    });
+  </script>
+</body>
+
+</html>
+
+<!--
+    Alunos: Pedro Bastos, Carlos Henrique, João Augusto, Arthur Heber, Pamela, Guilherme Macêdo, Angélica
+    Turma: 3° TDS - B
+-->

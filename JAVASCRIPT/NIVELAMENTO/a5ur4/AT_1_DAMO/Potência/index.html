@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Potencia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <section>
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade">
+    <div id="container_potencia"></div>
+    <div id="container_enviar">
+      <button id="enviar">Enviar</button>
+    </div>
+    <p id="resultado"></p>
+  </section>
+  <script>
+    const quantidadeInput = document.querySelector('#quantidade')
+    const enviarButton = document.querySelector('#enviar')
+    const containerPotencia = document.querySelector('#container_potencia')
+    const resultado = document.querySelector("#resultado")
+    enviarButton.addEventListener('click', () => {
+      const quantidade = parseInt(quantidadeInput.value)
+      for (let i = 0; i < quantidade; i++) {
+        containerPotencia.innerHTML += `
+        <label for="potencia${i}">Potência ${i + 1}:</label>
+        <input type="number" id="potencia${i}">
+        <br>
+      `
+      }
+
+      document.querySelector("#container_enviar").innerHTML = `
+      <button id="calcular">Calcular</button>
+    `
+
+      const calcularButton = document.querySelector("#calcular")
+      const potenciaInputs = containerPotencia.querySelectorAll("input")
+
+      calcularButton.addEventListener('click', () => {
+        const valores = []
+        for (let i = 0; i < potenciaInputs.length; i++) {
+          valores.push(potenciaInputs[i].value)
+        }
+
+        let valorFinal = 0
+        for (let i = 0; i < valores.length; i++) {
+          const potenciaNumero = parseInt(valores[i][valores[i].length - 1])
+          const restoNumero = parseInt(valores[i].slice(0, valores[i].length - 1))
+
+          valorFinal += potenciaNumero ** restoNumero
+        }
+
+        resultado.innerHTML = `Resultado: ${valorFinal}`
+      })
+    })
+  </script>
+</body>
+
+</html>
+
+<!--
+    Alunos: Pedro Bastos, Carlos Henrique, João Augusto, Arthur Heber, Pamela, Guilherme Macêdo, Angélica
+    Turma: 3° TDS - B
+-->
